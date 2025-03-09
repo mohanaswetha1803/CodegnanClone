@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    margin:0% 7%;
+    border-bottom: 2px solid #eee;
+}
+
+.logo {
+    width: 200px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    padding: 10px 20px;
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 300px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.submenu li {
+    /* padding: 10px 15px; */
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submenu li:hover {
+    background-color: #f1f1f1;
+}
+
+.nested-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    width: 270px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.nested-submenu li{
+    font-size: 16px;
+}
+
+.submenu li:hover .nested-submenu {
+    display: block;
+}
+
+.navbar li:hover .submenu {
+    display: block;
+}
+
+.submenu li:last-child,.nested-submenu li:last-child {
+    border-bottom: none;
+}
+
+.fa-caret-down, .fa-caret-right {
+    color: rgb(170, 169, 169);
+    margin-left:5%;
+}
+
+.nested-dropdown i {
+    position: absolute;
+    right: 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(35, 10, 123);
+    color: white;
+    padding: 80px 120px 100px 140px;
+}
+
+.main-text {
+    width: 50%;
+    font-family: "Spartan", Sans-serif;
+    padding: 1%;
+}
+
+.main-text h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color:yellow;
+}
+.main-text h1 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    
+}
+.main-text h1 span{
+    color: #1AB69D;
+}
+.main-text p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8%;
+    line-height: 1.6;
+    max-width: 540px;
+}
+
+.main-list {
+    list-style: none;
+    font-size: 16px;
+}
+
+.main-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.check-icon {
+    color: red;
+    font-size: 18px;
+    width: 1.25em;
+    margin-right: 10px;
+}
+.check-icon :hover{
+    color: #1ab69d;
+}
+
+.btn {
+    padding: 20px;
+    background-color: #1ab69d;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.btn i {
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: rgb(218, 17, 17);
+}
+
+.main-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-right: 3%;
+    position: relative;
+}
+.grid-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #009879;
+}
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 15%); /* Each column takes 15% of the row */
+    column-gap: 5px; /* Adjust horizontal space */
+    row-gap: 10px; /* Adjust vertical space */
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+
+
+.company-grid img {
+    width: 160px; /* Adjust width */
+    height: 70px; /* Adjust height */
+    object-fit: contain;
+    border: 2px solid black; /* Black border */
+    border-radius: 6px;
+    padding: 5px; 
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.company-grid img:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Responsive Design --  but not working*/
+/* @media (max-width: 1200px) {
+    .company-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .company-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .company-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+} */
+
+
+
+.footer1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%; /* Adds left & right margins */
+    background-color: #0a0a32;
+    font-family: "Spartan", Sans-serif;
+}
+
+.footer1 div {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+/* Left Section */
+.footer-left {
+    max-width: 450px;
+    margin-right:50px; 
+}
+
+.footer-left .logo {
+    width: 270px;
+    height: auto;
+}
+
+.footer-left p {
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+    width: 350px;
+    flex-wrap: wrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: -6%;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Middle & Right Section */
+.footer-middle, .footer-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top:30px;
+    gap: 10px;
+    align-items: flex-start;
+    width: 30%; 
+}
+
+.footer-middle h2, .footer-right h2 {
+    color: yellow;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-middle a, .footer-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.footer-middle a{
+    line-height: 2.5;
+}
+.footer-right a{
+    line-height: 1.3;
+}
+
+/* SECOND FOOTER SECTION */
+.footer2 {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a32;
+    padding: 30px 10%;
+    margin-top: -3%;
+}
+
+.footer2 img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-left:40px;
+    margin-right: 100px;
+
+}
+
+.footer2 p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: white;
+    line-height: 1.6;
+}
+
+.footer2 .social-icons {
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+/* @media (max-width: 992px) {
+    .footer1 {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+} */
+
+/* FOOTER SECTION 3 - Courses in Different Cities */
+.footer-courses {
+    display: flex;
+    justify-content: center; 
+    padding: 40px 0;
+    background-color: #0a0a32;
+}
+
+.footer-course {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-family:"Inter", Sans-serif;
+    border: 2px solid white; 
+    border-radius: 10px; 
+    max-width: 80%;
+    gap: 20px;
+}
+
+.footer-course .course-box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.footer-course h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow color */
+    margin-bottom: 10px;
+}
+.footer-course span {
+    font-size:16px;
+}
+
+
+/* FOOTER SECTION 4 - 'Our Branches' Button */
+.footer-button {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a32;
+}
+
+.footer-button button {
+    background-color: yellow;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* FOOTER SECTION 5 - Branch Addresses */
+.footer-branches{
+    display: flex;
+    justify-content: center; 
+    padding: 40px 0; 
+    background-color: #0a0a32;
+}
+
+.footer-branch {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: "Spartan", Sans-serif;
+    gap: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.footer-branch .branch-box {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-branch h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow color */
+    margin-bottom: 10px;
+}
+
+
+/* RESPONSIVE DESIGN */
+/* @media (max-width: 992px) {
+    .footer-courses,
+    .footer-branch {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-courses .course-box,
+    .footer-branch .branch-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
