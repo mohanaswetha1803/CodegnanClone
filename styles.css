@@ -204,22 +204,20 @@ body {
 
 .company-grid {
     display: grid;
-    grid-template-columns: repeat(6, 15%); /* Each column takes 15% of the row */
-    column-gap: 5px; /* Adjust horizontal space */
-    row-gap: 10px; /* Adjust vertical space */
+    grid-template-columns: repeat(6, 15%); 
+    column-gap: 5px; 
+    row-gap: 10px; 
     justify-content: center;
     align-items: center;
     max-width: 80%;
     margin: auto;
 }
 
-
-
 .company-grid img {
-    width: 160px; /* Adjust width */
-    height: 70px; /* Adjust height */
+    width: 160px; 
+    height: 70px; 
     object-fit: contain;
-    border: 2px solid black; /* Black border */
+    border: 2px solid black; 
     border-radius: 6px;
     padding: 5px; 
     background-color: white;
@@ -231,25 +229,137 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive Design --  but not working*/
-/* @media (max-width: 1200px) {
-    .company-grid {
-        grid-template-columns: repeat(4, 1fr); 
-    }
+.codegnan-success {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .company-grid {
-        grid-template-columns: repeat(3, 1fr); 
-    }
+/* Heading Styles */
+.subtitle {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-@media (max-width: 480px) {
-    .company-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-} */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
 
+/* Separator */
+.separator {
+    display: block;
+    margin: 10px auto 20px;
+    width: 130px;
+    height: auto;
+}
+
+/* Carousel Styles */
+.carousel {
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    white-space: nowrap;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+}
+
+.carousel-track img {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Duplicate images to create infinite effect */
+.carousel-track::after {
+    content: "";
+    display: flex;
+    gap: 20px;
+}
+
+.team-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 5%;
+    background-color: #F7F7F7;
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h6 {
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+}
+
+.text-content h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #ff4f75;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.benefits-list li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.team-images {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:10%;
+}
+
+.image-container {
+    text-align: center;
+    position: relative;
+}
+
+.image-container img {
+    width: 200px;
+    height: 250px;
+    border-radius: 0px 70px 0 70px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-container p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 
 .footer1 {
@@ -369,24 +479,6 @@ body {
     margin-left: 5px;
 }
 
-/* RESPONSIVE DESIGN */
-/* @media (max-width: 992px) {
-    .footer1 {
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .footer-left, .footer-middle, .footer-right {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-} */
-
 /* FOOTER SECTION 3 - Courses in Different Cities */
 .footer-courses {
     display: flex;
@@ -477,19 +569,3 @@ body {
     margin-bottom: 10px;
 }
 
-
-/* RESPONSIVE DESIGN */
-/* @media (max-width: 992px) {
-    .footer-courses,
-    .footer-branch {
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .footer-courses .course-box,
-    .footer-branch .branch-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-} */
